@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour {
 	//UI Components
 	public Text timeText, timeMultText;
 	public Slider timeSlider, timeMultSlider;
+	public RawImage playRawImage, pauseRawImage;
 
 	public GameManager GM;
 	private void Awake() {
@@ -21,6 +22,8 @@ public class UIManager : MonoBehaviour {
 	}
 	public void PauseButton(){
 		GM.isPlayMode = !GM.isPlayMode;
+		playRawImage.gameObject.SetActive(!GM.isPlayMode);
+		pauseRawImage.gameObject.SetActive(GM.isPlayMode);
 	}
 	public void ChangeTimeSpeed(){
 		GM.timeMultiplier = timeMultSlider.value;
@@ -28,6 +31,9 @@ public class UIManager : MonoBehaviour {
 	}
 	public void PauseButton(bool b){
 		GM.isPlayMode = b;
+	}
+	public void QuitButton(){
+		GM.QuitGame();
 	}
 	public string FormatTime(float t){
 		int sec = (int)(Mathf.Abs(t) % 60);

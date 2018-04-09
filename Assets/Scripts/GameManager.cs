@@ -26,8 +26,22 @@ public class GameManager : MonoBehaviour {
 		if(isPlayMode){
 			timeValue += Time.deltaTime * timeMultiplier;
 			UIM.timeSlider.value = timeValue;
+			UIM.timeSlider.interactable = false;
 		}else{
 			timeValue = UIM.timeSlider.value;
+			UIM.timeSlider.interactable = true;
 		}
+	}
+	public void QuitGame(){
+#if (UNITY_EDITOR || DEVELOPMENT_BUILD)
+    Debug.Log(this.name+" : "+this.GetType()+" : "+System.Reflection.MethodBase.GetCurrentMethod().Name); 
+#endif
+#if (UNITY_EDITOR)
+    UnityEditor.EditorApplication.isPlaying = false;
+#elif (UNITY_STANDALONE) 
+    Application.Quit();
+#elif (UNITY_WEBGL)
+    Application.OpenURL("about:blank");
+#endif
 	}
 }
