@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
 	public float timeMultiplier = 1f;
 	public bool isPlayMode = false;
 
+	public EventData[] events;
+
 	// Use this for initialization
 	void Start () {
 		if(UIM == null){
@@ -18,15 +20,21 @@ public class GameManager : MonoBehaviour {
 		}
 		UIM.timeSlider.minValue = minTimeValue;
 		UIM.timeSlider.maxValue = maxTimeValue;
-		UIM.timeSlider.value = UIM.timeSlider.minValue;
+		UIM.timeSlider.value = timeValue;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 		if(isPlayMode){
 			timeValue += Time.deltaTime * timeMultiplier;
 			UIM.timeSlider.value = timeValue;
 			UIM.timeSlider.interactable = false;
+
+			foreach(EventData e in events){
+				e.gameObject.GetComponent<EventActions>().LogCurrentState(timeValue);
+			}
+
 		}else{
 			timeValue = UIM.timeSlider.value;
 			UIM.timeSlider.interactable = true;

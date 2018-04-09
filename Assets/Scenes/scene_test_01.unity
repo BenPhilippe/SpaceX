@@ -375,11 +375,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIM: {fileID: 2141563648}
   WebCom: {fileID: 0}
-  timeValue: 0
+  timeValue: -2
   minTimeValue: -10
   maxTimeValue: 20
   timeMultiplier: 1
   isPlayMode: 0
+  events:
+  - {fileID: 1130064250}
 --- !u!1 &475698444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1378,63 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1075491109}
+--- !u!1 &1130064249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1130064251}
+  - component: {fileID: 1130064252}
+  - component: {fileID: 1130064250}
+  m_Layer: 0
+  m_Name: event_test_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1130064250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1130064249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d600d0fa3ae95f54ba01b7a98c838e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: test_name
+  triggerDate: 1
+  duration: 3
+  percentage: 0
+--- !u!4 &1130064251
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1130064249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130064252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1130064249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10295b1d9419da4d8dec67081e9de36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ed: {fileID: 0}
 --- !u!1 &1213099666
 GameObject:
   m_ObjectHideFlags: 0
