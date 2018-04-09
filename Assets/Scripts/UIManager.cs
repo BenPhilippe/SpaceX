@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour {
 		pauseRawImage.gameObject.SetActive(b);
 	}
 	public void ChangeTimeSpeed(){
-		GM.timeMultiplier = timeMultSlider.value;
+		GM.timeMultiplier = timeMultSlider.value/2;
 		timeMultText.text = GM.timeMultiplier.ToString() + "x";
 	}
 	public void PauseButton(bool b){
