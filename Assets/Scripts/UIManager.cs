@@ -16,14 +16,18 @@ public class UIManager : MonoBehaviour {
 		if(GM == null){
 			Debug.Log("No GameManager found.");
 		}
+		ChangePauseButtonTexture(GM.isPlayMode);
 	}
 	private void Update() {
 		timeText.text = FormatTime(GM.timeValue);
 	}
 	public void PauseButton(){
 		GM.isPlayMode = !GM.isPlayMode;
-		playRawImage.gameObject.SetActive(!GM.isPlayMode);
-		pauseRawImage.gameObject.SetActive(GM.isPlayMode);
+		ChangePauseButtonTexture(GM.isPlayMode);
+	}
+	public void ChangePauseButtonTexture(bool b){
+		playRawImage.gameObject.SetActive(!b);
+		pauseRawImage.gameObject.SetActive(b);
 	}
 	public void ChangeTimeSpeed(){
 		GM.timeMultiplier = timeMultSlider.value;
