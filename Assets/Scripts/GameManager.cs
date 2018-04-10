@@ -15,8 +15,18 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if(WebCom == null){
+			WebCom = GetComponent<WebComManager>();
+			if(WebCom == null){
+				WebCom = Object.FindObjectOfType<WebComManager>();
+			}
+		}
+
 		if(UIM == null){
-			Object.FindObjectOfType<UIManager>();
+			UIM = GetComponent<UIManager>();
+			if(UIM == null){
+				UIM = Object.FindObjectOfType<UIManager>();
+			}
 		}
 		UIM.timeSlider.minValue = minTimeValue;
 		UIM.timeSlider.maxValue = maxTimeValue;

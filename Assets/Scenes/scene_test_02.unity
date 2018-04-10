@@ -5074,7 +5074,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202812058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68, y: 24381, z: 34084}
+  m_LocalPosition: {x: 0, y: 150000, z: 500000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 60297959}
@@ -5091,11 +5091,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cf9c5931a3b3c4ba456c8213d7ebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_position: {x: -68, y: 24381, z: 34084}
-  m_precedingControlPointLocalPosition: {x: -0.14138031, y: -1130.4805, z: -26746.842}
-  m_precedingControlPointPosition: {x: -68.14138, y: 23250.52, z: 7337.158}
-  m_followingControlPointLocalPosition: {x: 0.14138031, y: 1130.4805, z: 26746.844}
-  m_followingControlPointPosition: {x: -67.85862, y: 25511.48, z: 60830.844}
+  m_position: {x: 0, y: 150000, z: 500000}
+  m_precedingControlPointLocalPosition: {x: -0.14138031, y: -1130.4844, z: -400750.62}
+  m_precedingControlPointPosition: {x: -0.14138031, y: 148869.52, z: 99249.375}
+  m_followingControlPointLocalPosition: {x: 0.14138031, y: 1130.4844, z: 400750.62}
+  m_followingControlPointPosition: {x: 0.14138031, y: 151130.48, z: 900750.6}
   m_handleMode: 2
 --- !u!1 &1203792279
 GameObject:
@@ -5410,10 +5410,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_position: {x: 0, y: 0, z: -1}
-  m_precedingControlPointLocalPosition: {x: 0, y: -10991.053, z: 0}
-  m_precedingControlPointPosition: {x: 0, y: -10991.053, z: -1}
-  m_followingControlPointLocalPosition: {x: 0, y: 10991.053, z: 0}
-  m_followingControlPointPosition: {x: 0, y: 10991.053, z: -1}
+  m_precedingControlPointLocalPosition: {x: 0, y: -51907.523, z: 0}
+  m_precedingControlPointPosition: {x: 0, y: -51907.523, z: -1}
+  m_followingControlPointLocalPosition: {x: 0, y: 51907.523, z: 0}
+  m_followingControlPointPosition: {x: 0, y: 51907.523, z: -1}
   m_handleMode: 2
 --- !u!1 &1394015214
 GameObject:
