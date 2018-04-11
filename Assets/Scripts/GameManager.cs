@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	public WebComManager WebCom;
 	public float timeValue = -10f;
 	public float minTimeValue, maxTimeValue;
+	public BezierSolution.BezierWalkerWithSpeed bezierWalker;
 	public float timeMultiplier = 1f;
 	public bool isPlayMode = false;
 
@@ -40,13 +41,15 @@ public class GameManager : MonoBehaviour {
 			timeValue += Time.deltaTime * timeMultiplier;
 			UIM.timeSlider.value = timeValue;
 			UIM.timeSlider.interactable = false;
-
+			
+			//bezierWalker.NormalizedT = (timeValue - minTimeValue) / maxTimeValue;
+			Debug.Log(UIM.timeSlider.normalizedValue);
 			foreach(EventData e in events){
 				e.gameObject.GetComponent<EventActions>().LogCurrentState(timeValue);
 			}
-
 		}else{
 			timeValue = UIM.timeSlider.value;
+			bezierWalker.NormalizedT = UIM.timeSlider.normalizedValue;
 			UIM.timeSlider.interactable = true;
 		}
 	}
